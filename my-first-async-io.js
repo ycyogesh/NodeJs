@@ -1,10 +1,10 @@
 
-const fs = require('fs')  
+let fs = require('fs')  
 
-fs.readFile(function callback(err,data){
-    const buf = data.toString().split("\n").length-1
-
-    console.log(buf);   
-
+fs.readFile(process.argv[2],function(err,data){
+    data = data.toString().split("\n").length-1
+    console.log(data);   
 })
 
+
+fs.readFile(process.argv[2],)
